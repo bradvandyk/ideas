@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+require_relative 'bradcommon.rb'
+
+class NilClass
+  def nil_or_empty?
+    true
+  end
+end
+
+class String
+  def nil_or_empty?
+    empty?
+  end
+end
+
+originalText = BradCommon.verifyideas()
+newidea = ARGV.join(" ")
+
+if newidea.nil_or_empty?
+  abort("add what dummy? feed me an idea")
+end
+
+newidea = "- #{newidea}"
+newtext = newidea + "\n" + originalText
+#puts("#{newidea}")
+#p("#{newtext}")
+system("echo \"#{newtext}\" > #{BradCommon.ideasFilePath}")
+#puts(";)")
+#puts("#{newtext}")
+
+#File.write("ideasFilePath, 'Some glorious content')

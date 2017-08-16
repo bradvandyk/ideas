@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative 'bradcommon.rb'
+
+ideas = BradCommon.verifyideas()
+
+#puts("show!")
+#puts("=====")
+puts("Uncategorized")
+puts("-------------")
+puts(ideas)
