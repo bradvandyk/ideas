@@ -1,4 +1,4 @@
-adfadftest#!/usr/bin/env ruby
+xadfadftest#!/usr/bin/env ruby
 
 require_relative 'bradcommon.rb'
 
